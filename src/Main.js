@@ -22,6 +22,7 @@ export default class Main extends React.Component {
     return (
       <div>
         <div>This is Main Class Component</div>
+        
         <Login />
         <Register />
         <LoginSuccessful />
