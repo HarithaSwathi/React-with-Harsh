@@ -8,6 +8,11 @@ import Logout from "./Logout";
 import Register from "./Register";
 import RegisterSuccessful from "./RegisterSuccessful";
 import UserList from "./UserList";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Nav from "./Nav";
+import ProductList from "./ProductList";
+import RegisterClass from "./RegisterClass";
+import Welcome from "./Welcome";
 
 export default class Main extends React.Component {
   // class component
@@ -15,7 +20,46 @@ export default class Main extends React.Component {
   //     super();
   //     console.log("This is constructor lifecycle - 1");
   // }
+  render() { // lifecycle
+    console.log("This is render lifecycle - 2");
+    console.log(this.state);
+    return (
+      <BrowserRouter>
+        <div>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<Welcome />} />
+            <Route path="/chat" element={<ChatList />} />
+            <Route path="/users" element={<UserList />} />
+            <Route path="/documents" element={<DocumentList />} />
+            <Route path="/logout" element={<Logout />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    );
+    /* return (
+      <div>
+    <BrowserRouter>
+    <Routes>
+    <Route path="/" element={<Nav />}>
+    <Route index element={<Welcome />} />
+    <Route path="/addproduct" element={<AddProduct />} />
+    <Route path="/products" element={<ProductList products={this.state.products} />} />
+    <Route path="/title" element={<Title mobile="iphone" />} />
+    <Route path="/app" element={<App />} />
+    <Route path="/users" element={<UserLocalStorage />} />
+    </Route>
+    <Route path="/login" element={<Login />} />
+    <Route path="/register" element={<RegisterClass />} />
+    </Routes>
+    </BrowserRouter>
+    </div>
+    ) */
+    }
+  }
+   
 
+/*
   render() {
     // lifecycle
     // console.log("This is render lifecycle - 2");
@@ -35,8 +79,9 @@ export default class Main extends React.Component {
       </div>
     );
   }
-}
-//     return (
+} */
+
+/* //     return (
 //         <>
 //             <div>Welcome to Main page</div>
 //             <Login />
@@ -51,6 +96,4 @@ export default class Main extends React.Component {
 
 //         </>
 //     );
-// }
-
-// export default Main;
+// export default Main; */
