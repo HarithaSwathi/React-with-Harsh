@@ -1,0 +1,102 @@
+/* Page container */
+.container {
+    width: 80%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Browser navigation bar */
+  .browser-bar {
+    display: flex;
+    align-items: center;
+    background: #ddd;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .browser-bar button {
+    background: none;
+    border: 1px solid black;
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .browser-bar input {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid black;
+  }
+  
+  /* Header styles */
+  .header {
+    text-align: center;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .nav button {
+    background-color: #ccc;
+    border: 1px solid gray;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .nav .active {
+    background-color: gray;
+    font-weight: bold;
+  }
+  
+  /* User List */
+  .user-list h3 {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid #aaa;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #ddd;
+  }
+  
+  /* Alternating row colors */
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fff;
+  }
+  
+  /* Action buttons */
+  button {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    text-decoration: underline;
+  }
+  

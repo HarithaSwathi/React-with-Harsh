@@ -1,28 +1,33 @@
 import React from "react";
-import './Welcome.css'; // External CSS
-class Welcome extends React.Component {
+import { useNavigate } from "react-router-dom";
+import "./Welcome.css"; // Import CSS file for styling
 
-    constructor(props) {
-        super(props);
-    }
+const Welcome = () => {
+  const navigate = useNavigate(); // Hook for page navigation
 
-    render() {
-        return <h2>Welcome to the Dashboard</h2>;
-        /* let myStyle = {
-            color: 'blue',
-            fontSize: ' 40px'
-        };
+  return (
+    <div className="welcome-container">
+      {/* Browser-like header
+      <div className="browser-header"></div> */}
 
-        return (<div>
-            <div style={{ border: '12px solid red', backgroundColor: 'yellow' }}>
-                <div style={myStyle}>Welcome Class Component</div>
-                <div style={myStyle}>Props Title is {this.props.title}</div>
-            </div>
-            <div className="anotherDiv demo">This is another div</div>
-            <div className="anotherDiv">This is another div 2</div>
-            <div id="username">Shamim</div>
-        </div>); */
-    }
-}
+      {/* Welcome message */}
+      <h2>Welcome to Users Module</h2>
+
+      {/* Login Section */}
+      <div className="user-actions">
+        <p>
+          <b>Existing Users</b>
+        </p>
+        <button onClick={() => navigate("/login")}>Login</button>
+
+        {/* Register Section */}
+        <p>
+          <b>New Users</b>
+        </p>
+        <button onClick={() => navigate("/register")}>Register</button>
+      </div>
+    </div>
+  );
+};
 
 export default Welcome;
